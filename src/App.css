@@ -1,0 +1,81 @@
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('./assets/fund.jpg');
+  background-size: cover; /* Garante que a imagem cubra todo o container */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Mantém a imagem fixa durante a rolagem */
+  margin: 0;
+  padding: 20px; /* Adicione um pouco de padding geral ao body */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Para que os filhos (Header, main-content) se alinhem verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  color: #333;
+}
+
+.app-container {
+  max-width: 960px;
+  width: 95%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px; /* Aumentei um pouco o border-radius */
+  padding: 30px; /* Aumentei um pouco o padding interno */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h1 {
+  color: #4CAF50; /* Um verde mais moderno */
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.8em; /* Título um pouco maior */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15); /* Sombra mais sutil */
+}
+
+.main-content {
+  width: 100%; /* Garante que o main-content ocupe a largura do app-container */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Estica o Chatbox para ocupar a largura */
+}
+
+/* Media Query para Tablets (larguras menores que 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .app-container {
+    width: 90%;
+    padding: 25px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 2.4em;
+    margin-bottom: 25px;
+  }
+}
+
+/* Media Query para Celulares (larguras menores que 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px; /* Reduz o padding geral em celulares */
+  }
+
+  .app-container {
+    width: 98%;
+    margin: 10px auto; /* Centraliza horizontalmente com margens automáticas */
+    padding: 15px;
+    border-radius: 0; /* Remove a borda arredondada em telas pequenas */
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+}

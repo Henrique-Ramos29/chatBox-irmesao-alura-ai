@@ -1,0 +1,146 @@
+/* components/Chatbox.css */
+
+.chatbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Aumentei o espaçamento entre os elementos internos */
+    padding: 30px; /* Aumentei o padding interno */
+    background-color: #f9fbe7; /* Um verde bem claro e suave */
+    border-radius: 12px; /* Bordas mais arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid #cddc39; /* Borda sutil */
+    margin: 0 auto; /* Centraliza o elemento block horizontalmente */
+    
+}
+
+h1 {
+    color: #558b2f; /* Verde mais escuro para o título do chatbox */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.input-area {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    padding: 14px;
+    width: 100%;
+    border-radius: 8px; /* Bordas mais arredondadas */
+    border: 1px solid #8bc34a; /* Verde claro para a borda do input */
+    box-sizing: border-box;
+    font-size: 18px; /* Fonte um pouco maior */
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna suave */
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #689f38; /* Verde mais escuro ao focar */
+    box-shadow: 0 0 7px rgba(139, 195, 74, 0.3); /* Sombra ao focar */
+}
+
+.send-button {
+    padding: 14px 24px;
+    background-color: #689f38; /* Verde mais escuro para o botão */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Bordas mais arredondadas */
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.send-button:hover {
+    background-color: #558b2f; /* Verde mais escuro no hover */
+    transform: translateY(-1px); /* Pequeno efeito de levantar ao passar o mouse */
+}
+
+.send-button:active {
+    transform: translateY(0); /* Remove o efeito de levantar ao clicar */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.error-message {
+    color: #d32f2f;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center; /* Centraliza a mensagem de erro */
+}
+
+.response-area {
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid #aed581; /* Verde claro para a borda da resposta */
+    border-radius: 8px;
+    background-color: #f1f8e9; /* Verde bem claro para o fundo da resposta */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap;
+    line-height: 1.8;
+    font-size: 17px;
+    color: #43a047; /* Verde mais escuro para o texto da resposta */
+}
+
+.conversation-history {
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid #c8e6c9; /* Verde ainda mais claro para a borda do histórico */
+    border-radius: 8px;
+    background-color: #e8f5e9; /* Fundo bem claro para o histórico */
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.conversation-history h2 {
+    color: #388e3c;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.message {
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.message.user {
+    background-color: #ccff90; /* Verde limão claro para mensagens do usuário */
+    text-align: right;
+    color: #2e7d32; /* Verde mais escuro para o texto do usuário */
+}
+
+.message.assistant {
+    background-color: #a5d6a7; /* Verde um pouco mais escuro para mensagens do bot */
+    text-align: left;
+    color: #1b5e20; /* Verde ainda mais escuro para o texto do bot */
+}
+
+.message strong {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Media Queries DENTRO do Chatbox (opcional, para ajustes finos) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .input-field {
+        font-size: 16px;
+        padding: 12px;
+    }
+    .send-button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
