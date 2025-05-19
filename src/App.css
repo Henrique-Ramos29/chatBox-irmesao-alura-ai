@@ -68,7 +68,7 @@ h1 {
   }
 
   .app-container {
-    width: 98%;
+    width: 90%;
     margin: 10px auto; /* Centraliza horizontalmente com margens automáticas */
     padding: 15px;
     border-radius: 0; /* Remove a borda arredondada em telas pequenas */
