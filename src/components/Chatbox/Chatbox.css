@@ -23,6 +23,7 @@ h1 {
 
 .input-area {
     display: flex;
+    flex-direction: column;
     gap: 15px;
     margin-bottom: 20px;
 }
@@ -132,6 +133,8 @@ h1 {
 
 /* Media Queries DENTRO do Chatbox (opcional, para ajustes finos) */
 @media (max-width: 600px) {
+
+    
     h1 {
         font-size: 2em;
     }

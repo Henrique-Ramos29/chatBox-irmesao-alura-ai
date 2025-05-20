@@ -3,7 +3,7 @@ import { GoogleGenAI } from '@google/genai';
 
 // **ATENÇÃO: Incluir a chave da API diretamente no código não é recomendado para produção.**
 // **Considere usar variáveis de ambiente (.env.local) para maior segurança.**
-const apiKey = 'AIzaSyCns-ZkilBAyq350vExT7Qylh46WJ_YL1E'; // Substitua pela sua chave real
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
 const genAI = new GoogleGenAI({ apiKey });
 async function sendMessageToAI(messages) {
